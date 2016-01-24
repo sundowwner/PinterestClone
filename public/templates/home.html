@@ -2,10 +2,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
-                <h1 id="pInt" ><span ><img  src="http://marketingland.com/wp-content/ml-loads/2014/07/pinterest-logo-white-1920.png" alt="" style="height:50px;width:50px" /></span><span>Pinterest a revisioning!!</span></h1>
-            <div ng-repeat="b in vm.boards" class="col-lg-3 col-md-4 col-xs-5 thumb">
+                <h1 id="pInt" ><span ><img  src="http://marketingland.com/wp-content/ml-loads/2014/07/pinterest-logo-white-1920.png" alt="" style="height:50px;width:50px" /></span><span>Pinterest reimagined!!</span></h1>
+            <div ng-repeat="b in vm.boards" class="col-md-4 col-md-4 col-md-4 thumb">
                 <h2>{{b.name}}</h2>
-                <a ng-href="/boardDetails/{{b._id }}"><img ng-src="{{b.picture}}" class="img-responsive" alt="" /></a><br>
+                <a ng-href="/boardDetails/{{b._id }}"><img ng-src="{{b.picture}}" class="img-responsive thumbnail"  alt="" /></a><br>
 
                     <a ng-href="/update/{{b._id}}" class="btn  btn-info">Update</a>
                     <a href="#"><button ng-click="vm.delete(b._id)" class="btn btn-danger">Delete</button></a>
