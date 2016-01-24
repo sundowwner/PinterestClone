@@ -1,3 +1,13 @@
+#body{
+    background-color: black;
+}
+#pInt{
+    margin-left: 619px;
+    margin-bottom: 25px;
+}
+h1,h2,h3,h4,h5,h6,p,label{
+    color: white;
+}
 .resH   {
     list-style: none;
 }
@@ -12,9 +22,29 @@ textarea {
     width:330px;
 }
 .newB{
-    border: 1px solid black
+    border: 1px solid black;
 }
 div img{ display: inline-block;}
 .fontB{
     font-weight: bold;
+}
+.bDetails   {
+    border: 1px solid white;
+    width: 523px;
+    margin-top: 26px;
+}
+.sign2{
+    margin-top: -19px;
+}
+.delBt  {
+    margin-bottom: -237px;
+}
+.ptag   {
+    margin-left: -68px;
+}
+.pinB{
+    margin-top: 16px;
+}
+.entP{
+    margin-left: 119px;
 }

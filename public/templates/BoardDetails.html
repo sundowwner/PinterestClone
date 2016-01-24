@@ -1,6 +1,6 @@
 <div class="container-fluid" >
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 entP">
 
             <h2 class="sign1 animated fadeInUp">Enter Pin Info</h2><br>
             <form role="form" ng-submit="vm.addPin()">
@@ -26,8 +26,8 @@
 
                             <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                         </div>
-                    </div>
-                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right btn-block">
+                    </div><br>
+                    <input type="submit" name="submit" id="submit" value="Submit" class="form-control btn btn-info pull-right btn-block">
                 </div>
             </form>
         </div>
@@ -35,22 +35,20 @@
 
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-7 bDetails">
             <h2>{{vm.board.name}}</h2>
-            <h6><span class="fontB">Submitted by:</span> {{vm.board.createdBy.username}}<span> <h6 style="display: inline-block"><span class="fontB">Contact:</span>  {{vm.board.createdBy.email}}</h6></span></h6>
+            <h5><span class="fontB animated fadeInLeftBig">Submitted by:</span> <span class="animated fadeInRightBig">{{vm.board.createdBy.username}}</span><span> <h5 style="display: inline-block"><span class="fontB animated fadeInLeftBig">Contact:</span>  <span class="animated fadeInRightBig">{{vm.board.createdBy.email}}</span></h5></span></h5>
 
-            <img style="height:300px;width:300px" ng-src="{{vm.board.picture}}" alt="" />
+            <img style="height:300px;width:300px" class="animated rollIn" ng-src="{{vm.board.picture}}" alt="" />
 
-            <div class=""  ng-repeat="c in vm.board.pins">
-                <img  class="thumbnail" style="height:300px;width:300px; display:inline-block" ng-src="{{c.picture}}" alt="" />
+            <div class="pinB"  ng-repeat="c in vm.board.pins">
+                <h4 >{{c.title}}</h4>
+                <a href="/boardDetails/{{b._id }}"><img  class="thumbnail animated rollIn" style="height:300px;width:300px; display:inline-block" ng-src="{{c.picture}}" alt="" /></a>
+                <button class="btn btn-info btn-danger delBt" type="button" ng-click="vm.deletePin(c)">Delete</button>
 
-                <h6>{{c.title}}</h6>
+                <p class="ptag" style="display:inline-block"><em>{{c.description}}</em></p>
 
-                <h6 >{{c.description}}</h6>
-
-                <button type="button" ng-click="vm.deletePin(c)">Delete</button>
-
-            </div>
+            </div><br><br>
         </div>
     </div>
 </div>
