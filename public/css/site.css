@@ -40,6 +40,10 @@ div img{ display: inline-block;}
 .fontB{
     font-weight: bold;
 }
+#regLbut{
+    width: 660px;
+    margin-right: 289px;
+}
 .bd1{
     width: 410px;
 }
@@ -67,7 +71,7 @@ div img{ display: inline-block;}
     margin-bottom: -237px;
 }
 .ptag   {
-    margin-left: -68px;
+    margin-left: 6px;
 }
 .pinB{
     margin-top: 16px;

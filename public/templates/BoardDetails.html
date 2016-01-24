@@ -2,8 +2,9 @@
     <div class="row">
         <div class="col-md-4 entP">
 
-            <h2 class="sign1 animated fadeInUp">Enter Pin Info</h2><br>
-            <form role="form" ng-submit="vm.addPin()">
+            <h2 ng-show="gc.status.username !== null" class="sign1 animated fadeInUp">Enter Pin Info</h2><br>
+            <h2 ng-hide="gc.status.username !== null">Login to add a PIN to the <span style="font-weight:bold;font-size:35px">{{vm.board.name}}</span> PinBoard </h2>
+            <form ng-show="gc.status.username !== null" role="form" ng-submit="vm.addPin()">
                 <div class=" bd1 animated fadeInUp">
                     <div class="form-group">
                         <label>Title</label>
@@ -44,7 +45,7 @@
             <div class="pinB"  ng-repeat="c in vm.board.pins">
                 <h4 >{{c.title}}</h4>
                 <a href="/boardDetails/{{b._id }}"><img  class="thumbnail animated rollIn" style="height:300px;width:300px; display:inline-block" ng-src="{{c.picture}}" alt="" /></a>
-                <button class="btn btn-info btn-danger delBt" type="button" ng-click="vm.deletePin(c)">Delete</button>
+                <button  ng-show="gc.status.username !== null" class="btn btn-info btn-danger delBt" type="button" ng-click="vm.deletePin(c)">Delete</button>
 
                 <p class="ptag" style="display:inline-block"><em>{{c.description}}</em></p>
 

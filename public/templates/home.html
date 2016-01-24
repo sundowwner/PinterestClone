@@ -7,8 +7,8 @@
                 <h2>{{b.name}}</h2>
                 <a ng-href="/boardDetails/{{b._id }}"><img ng-src="{{b.picture}}" class="img-responsive thumbnail"  alt="" /></a><br>
 
-                    <a ng-href="/update/{{b._id}}" class="btn  btn-info">Update</a>
-                    <a href="#"><button ng-click="vm.delete(b._id)" class="btn btn-danger">Delete</button></a>
+                    <a ng-show="gc.status.username !== null" ng-href="/update/{{b._id}}" class="btn  btn-info">Update</a>
+                    <a href="#" ng-show="gc.status.username !== null"><button ng-click="vm.delete(b._id)" class="btn btn-danger">Delete</button></a>
             </div>
 
     </div>
