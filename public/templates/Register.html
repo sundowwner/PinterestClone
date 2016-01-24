@@ -1,6 +1,6 @@
 
-<div class="container ">
-    <div class="row">
+<div class="container">
+    <div class="row regInput">
         <h1><span class="animated fadeInLeftBig">You must</span><span class="animated fadeInRightBig"> register below!</span></h1><br><br>
         <form role="form" ng-submit="vm.register()">
             <div class="col-lg-9 sign2 animated fadeInUp">
@@ -29,12 +29,12 @@
                 <div class="form-group">
                     <label for="Inputpassword">Confirm Password</label>
                     <div class="input-group">
-                        <input  type="password" class="form-control" ng-model="vm.user.cpassword"  required>
+                        <input  type="password" class="form-control" placeholder="Confirm Password" ng-model="vm.user.cpassword" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
 
-                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                <input type="submit" name="submit" id="submit" value="Submit" class="subBt2 btn btn-info pull-right btn-block">
             </div>
         </form>
 

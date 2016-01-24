@@ -1,6 +1,17 @@
 #body{
     background-color: black;
 }
+.regInput{
+    margin-left: 157px;
+}
+.logBt{
+    margin-top: 10px;
+}
+
+.logIn{
+    margin-left: 180px;
+    margin-right: 46px;
+}
 #pInt{
     margin-left: 619px;
     margin-bottom: 25px;
@@ -29,13 +40,21 @@ div img{ display: inline-block;}
 .fontB{
     font-weight: bold;
 }
+.bd1{
+    width: 410px;
+}
+.subBt2{
+    margin-top: 10px;
+}
 .bDetails   {
-    border: 1px solid white;
+    border: 6px solid white;
+    border-style:ridge;
     width: 523px;
     margin-top: 26px;
 }
 .sign2{
     margin-top: -19px;
+    width: 625px;
 }
 .delBt  {
     margin-bottom: -237px;
