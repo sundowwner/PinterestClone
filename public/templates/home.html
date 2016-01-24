@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div ng-repeat="b in vm.boards" class="col-lg-3 col-md-4 col-xs-5 thumb">
+
+                <h3><a ng-href="/boardDetails/{{b._id }}" class="btn btn-info btn-lg">{{b.name}}</a></h3>
+                <a ng-href="/boardDetails/{{b._id }}"><img ng-src="{{b.picture}}" class="img-responsive" alt="" /></a><br>
+
+                    <a ng-href="/update/{{b._id}}" class="btn  btn-info">Update</a>
+                    <a href="#"><button ng-click="vm.delete(b._id)" class="btn btn-danger">Delete</button></a>
+            </div>
+
+    </div>
+
+
+</div>
+
+<!-- <p>Name: {{b.name}}</p> -->
+<!-- <h3>Created By: {{b.createdBy}}</h3> -->
+
+<!-- <a ng-href="/update/{{b._id}}">Update</a>
+<button ng-click="vm.delete(b._id)">Delete</button> -->
+<!-- <h2>{{vm.boards}}</h2> -->

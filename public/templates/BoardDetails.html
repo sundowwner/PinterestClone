@@ -1,0 +1,56 @@
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-4">
+
+            <h2 class="sign1 animated fadeInUp">Enter Pin Info</h2><br>
+            <form role="form" ng-submit="vm.addPin()">
+                <div class=" sign2 animated fadeInUp">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <div class="input-group">
+                            <input type="text" ng-model="vm.pin.title" class="form-control"   placeholder="Title">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label >Description</label>
+                        <div class="input-group">
+                            <input type="text" ng-model="vm.pin.description" class="form-control"   placeholder="Description" >
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label >Picture URL</label>
+                        <div class="input-group">
+                            <input name="url" class="form-control" ng-model="vm.pin.picture" placeholder="picture" >
+
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right btn-block">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+
+        <div class="col-md-7">
+            <h2>{{vm.board.name}}</h2>
+            <h6><span class="fontB">Submitted by:</span> {{vm.board.createdBy.username}}<span> <h6 style="display: inline-block"><span class="fontB">Contact:</span>  {{vm.board.createdBy.email}}</h6></span></h6>
+
+            <img style="height:300px;width:300px" ng-src="{{vm.board.picture}}" alt="" />
+
+            <div class=""  ng-repeat="c in vm.board.pins">
+                <img  class="thumbnail" style="height:300px;width:300px; display:inline-block" ng-src="{{c.picture}}" alt="" />
+
+                <h6>{{c.title}}</h6>
+
+                <h6 >{{c.description}}</h6>
+
+                <button type="button" ng-click="vm.deletePin(c)">Delete</button>
+
+            </div>
+        </div>
+    </div>
+</div>

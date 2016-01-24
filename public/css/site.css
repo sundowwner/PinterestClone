@@ -1,0 +1,20 @@
+.resH   {
+    list-style: none;
+}
+.pname{
+    font-size: 24px;
+}
+textarea {
+    resize: both;
+    overflow: auto;
+}
+.pinput{
+    width:330px;
+}
+.newB{
+    border: 1px solid black
+}
+div img{ display: inline-block;}
+.fontB{
+    font-weight: bold;
+}
