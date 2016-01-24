@@ -43,6 +43,13 @@ div img{ display: inline-block;}
 .bd1{
     width: 410px;
 }
+.picUrl {
+    width: 269px
+}
+.bcMain{
+    margin-left: 280px;
+}
+
 .subBt2{
     margin-top: 10px;
 }
