@@ -32,6 +32,8 @@
         "public/javascript/controllers/BoardUpdateController.ts",
         "public/javascript/controllers/GlobalController.ts",
         "public/javascript/controllers/HomeController.ts",
+        "public/javascript/controllers/PinDetailsController.ts",
+        "public/javascript/controllers/PinUpdateController.ts",
         "public/javascript/controllers/UserController.ts",
         "public/javascript/services/HomeService.ts",
         "public/javascript/services/HTTPFactory.ts",

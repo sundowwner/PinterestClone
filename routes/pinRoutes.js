@@ -7,7 +7,7 @@ var User = mongoose.model("User");
 var Board = mongoose.model("Board");
 var Pin = mongoose.model("Pin");
 var auth = jwt({
-    secret: "SecretKey",
+    secret: process.env.JWT_SECRET,
     userProperty: "payload"
 });
 router.post("/", auth, function (req, res, next) {

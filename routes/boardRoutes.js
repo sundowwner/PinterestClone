@@ -7,7 +7,7 @@ var Board = mongoose.model("Board");
 var User = mongoose.model("User");
 var auth = jwt({
     userProperty: "payload",
-    secret: "SecretKey"
+    secret: process.env.JWT_SECRET
 });
 router.get("/", function (req, res, next) {
     Board.find({})

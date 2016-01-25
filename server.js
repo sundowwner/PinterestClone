@@ -1,4 +1,5 @@
 "use strict";
+require("dotenv").config({ silent: true });
 var express = require('express');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -10,7 +11,7 @@ require("./models/users");
 require("./models/boards");
 require("./models/pins");
 require("./config/passport");
-mongoose.connect("mongodb://localhost/pinterest_clone");
+mongoose.connect(process.env.MONGO_URL);
 app.set('views', './views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

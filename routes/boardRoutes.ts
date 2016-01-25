@@ -9,7 +9,7 @@ let auth = jwt ({
 
     userProperty: "payload",
 
-    secret: "SecretKey"
+    secret: process.env.JWT_SECRET
 });
 
 //GET: /boards

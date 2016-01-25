@@ -25,7 +25,7 @@ UserSchema.method("generateJWT", function(){
         _id: this._id,
         username: this.username,
         email: this.email
-    }, "SecretKey");
+    }, process.env.JWT_SECRET);
 });
 
 export let User = mongoose.model("User", UserSchema);

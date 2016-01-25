@@ -9,7 +9,7 @@ let Board = mongoose.model("Board");
 let Pin = mongoose.model("Pin");
 
 let auth = jwt ({
-    secret: "SecretKey",
+    secret: process.env.JWT_SECRET,
     userProperty: "payload"
 });
 

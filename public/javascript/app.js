@@ -34,6 +34,16 @@ var App;
             controller: app.Controllers.BoardUpdateController,
             controllerAs: "vm"
         })
+            .when("/pinUpdate/:id", {
+            templateUrl: "/templates/PinUpdate.html",
+            controller: app.Controllers.PinUpdateController,
+            controllerAs: "vm"
+        })
+            .when("/pinDetails/:id", {
+            templateUrl: "/templates/PinDetails.html",
+            controller: app.Controllers.PinDetailsController,
+            controllerAs: "vm"
+        })
             .otherwise({ redirectTo: '/' });
         $locationProvider.html5Mode(true);
         $httpProvider.interceptors.push('HTTPFactory');

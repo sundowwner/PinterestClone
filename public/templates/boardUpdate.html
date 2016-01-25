@@ -1,12 +1,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-9 form-group">
 
             <form ng-submit = "vm.update()">
                 <label>Name: </label>
                 <input ng-model = "vm.board.name" type = "text" placeholder = "Title">
                 <br><br>
+                <label>Picture URL:
+                <input style="width:370px"name="url" class="form-control" ng-model="vm.board.picture" placeholder="picture" ></label><br>
                 <button type ="submit">Submit</button>
             </form>
         </div>

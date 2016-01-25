@@ -1,4 +1,5 @@
 "use strict";
+require("dotenv").config({ silent: true });
 import express = require('express');
 import favicon = require('serve-favicon');
 import logger = require('morgan');
@@ -15,7 +16,7 @@ require("./models/pins");
 require("./config/passport");
 
 
-mongoose.connect("mongodb://localhost/pinterest_clone");
+mongoose.connect(process.env.MONGO_URL);
 
 // view engine setup
 app.set('views', './views');
