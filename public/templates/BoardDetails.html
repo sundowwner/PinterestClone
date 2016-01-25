@@ -40,14 +40,15 @@
             <h2>{{vm.board.name}}</h2>
             <h5><span class="fontB animated fadeInLeftBig">Submitted by:</span> <span class="animated fadeInRightBig">{{vm.board.createdBy.username}}</span><span> <h5 style="display: inline-block"><span class="fontB animated fadeInLeftBig">Contact:</span>  <span class="animated fadeInRightBig">{{vm.board.createdBy.email}}</span></h5></span></h5>
 
-            <img style="height:300px;width:300px" class="animated rollIn" ng-src="{{vm.board.picture}}" alt="" />
+            <img style="height:250px;width:250px" class="animated rollIn" ng-src="{{vm.board.picture}}" alt="" /><br><br>
 
             <div class="pinB"  ng-repeat="c in vm.board.pins">
                 <h4 >{{c.title}}</h4>
-                <a href="/boardDetails/{{b._id }}"><img  class="thumbnail animated rollIn" style="height:300px;width:300px; display:inline-block" ng-src="{{c.picture}}" alt="" /></a>
-                <button  ng-show="gc.status.username !== null" class="btn btn-info btn-danger delBt" type="button" ng-click="vm.deletePin(c)">Delete</button>
+                <a href="/boardDetails/{{b._id }}"><img  class="thumbnail animated rollIn" style="height:250px;width:250px; display:inline-block" ng-src="{{c.picture}}" alt="" /></a>
+                <button  style="margin-top:-43px"  ng-show="gc.status.username == c.createdByUsername || gc.status.username == vm.board.createdBy.username" class="btn btn-info btn-danger delBt" type="button" ng-click="vm.deletePin(c)">Delete</button><br>
 
-                <p class="ptag" style="display:inline-block"><em>{{c.description}}</em></p>
+                <p class="ptag" style="display:inline-block"><em>{{c.description}}</em></p><br>
+                <p class="ptag" style="display:inline-block"><em>By: {{c.createdByUsername}}</em></p><br><br>
 
             </div><br><br>
         </div>

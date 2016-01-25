@@ -1,6 +1,10 @@
 #body{
     background-color: black;
 }
+#logStatus{
+    margin-left: 1400px;
+    margin-top: 15px;
+}
 .regInput{
     margin-left: 157px;
 }

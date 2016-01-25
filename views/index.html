@@ -33,9 +33,10 @@
                     <li ng-hide="gc.status.username !== null"><a href="/register">Register</a></li>
                     <li ng-hide="gc.status.username !== null"><a href="/login">Login</a></li>
                     <li ng-show="gc.status.username !== null"><button style="margin-top:10px" ng-click="gc.logout()">Logout</button></li>
+                    <li ng-show="gc.status.username !== null" id="logStatus">Logged in as: {{gc.status.username | uppercase }}</li>
 
                 </ul>
-                
+
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"></a></li>
 
